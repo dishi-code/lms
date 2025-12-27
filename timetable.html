@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Timetable - UniLMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- same CSS file as other pages -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .tt-card {
+      margin-top: 12px;
+    }
+    .tt-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .tt-table th,
+    .tt-table td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .tt-table thead {
+      background: #eff6ff;
+    }
+    .tt-day {
+      background: #f9fafb;
+      font-weight: 600;
+    }
+    .tt-lunch {
+      background: #fef3c7;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar (same style as other pages) -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span>L</span> UniLMS
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="dashboard.html" class="nav-link">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="courses.html" class="nav-link">
+          <span class="icon">📚</span>
+          <span>My Courses</span>
+        </a>
+        <a href="timetable.html" class="nav-link">
+          <span class="icon">🕒</span>
+          <span>Timetable</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">📝</span>
+          <span>Assignments</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">📊</span>
+          <span>Grades</span>
+        </a>
+
+        <div class="nav-section-title">Other</div>
+        <a href="#" class="nav-link">
+          <span class="icon">💬</span>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">⚙️</span>
+          <span>Settings</span>
+        </a>
+        <a href="login.html" class="nav-link">
+          <span class="icon">🚪</span>
+          <span>Logout</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        © 2025 KL/Your Univ LMS
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <div>
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>Timetable</h1>
+          <p>Student class timetable (weekly)</p>
+        </div>
+        <div class="topbar-right">
+          <div class="badge-pill">Semester 3</div>
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <!-- Timetable card -->
+      <main class="main">
+        <section class="card tt-card">
+          <div class="card-header">
+            <h2 class="card-title">Weekly class timetable</h2>
+            <p class="card-subtitle">Slots for your registered courses</p>
+          </div>
+
+          <table class="tt-table">
+            <thead>
+              <tr>
+                <th>Day / Time</th>
+                <th>09:00 - 10:00</th>
+                <th>10:00 - 11:00</th>
+                <th>11:00 - 12:00</th>
+                <th>12:00 - 13:00</th>
+                <th>14:00 - 15:00</th>
+                <th>15:00 - 16:00</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tt-day">Monday</td>
+                <td>Data Structures</td>
+                <td>DBMS</td>
+                <td>Java Programming</td>
+                <td class="tt-lunch">LUNCH</td>
+                <td>Discrete Math</td>
+                <td>Free</td>
+              </tr>
+              <tr>
+                <td class="tt-day">Tuesday</td>
+                <td>DBMS Lab</td>
+                <td>DBMS Lab</td>
+                <td>DBMS Lab</td>
+                <td class="tt-lunch">LUNCH</td>
+                <td>English</td>
+                <td>Sports</td>
+              </tr>
+              <tr>
+                <td class="tt-day">Wednesday</td>
+                <td>Data Structures</td>
+                <td>Discrete Math</td>
+                <td>Java Programming</td>
+                <td class="tt-lunch">LUNCH</td>
+                <td>Java Lab</td>
+                <td>Java Lab</td>
+              </tr>
+              <tr>
+                <td class="tt-day">Thursday</td>
+                <td>DBMS</td>
+                <td>Data Structures</td>
+                <td>Discrete Math</td>
+                <td class="tt-lunch">LUNCH</td>
+                <td>Soft Skills</td>
+                <td>Soft Skills</td>
+              </tr>
+              <tr>
+                <td class="tt-day">Friday</td>
+                <td>Data Structures</td>
+                <td>DBMS</td>
+                <td>Java Programming</td>
+                <td class="tt-lunch">LUNCH</td>
+                <td>Mini Project</td>
+                <td>Mini Project</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

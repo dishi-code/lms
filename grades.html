@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grades - UniLMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .grades-card { margin-top: 12px; }
+    .grades-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .grades-table th,
+    .grades-table td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: center;
+    }
+    .grades-table thead {
+      background: #eff6ff;
+    }
+    .grade-badge {
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .grade-a {
+      background: rgba(22, 163, 74, 0.15);
+      color: #15803d;
+    }
+    .grade-b {
+      background: rgba(59, 130, 246, 0.15);
+      color: #1d4ed8;
+    }
+    .grade-c {
+      background: rgba(245, 158, 11, 0.15);
+      color: #b45309;
+    }
+    .grade-f {
+      background: rgba(239, 68, 68, 0.15);
+      color: #b91c1c;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span>L</span> UniLMS
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="dashboard.html" class="nav-link">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="courses.html" class="nav-link">
+          <span class="icon">📚</span>
+          <span>My Courses</span>
+        </a>
+        <a href="timetable.html" class="nav-link">
+          <span class="icon">🕒</span>
+          <span>Timetable</span>
+        </a>
+        <a href="assignments.html" class="nav-link">
+          <span class="icon">📝</span>
+          <span>Assignments</span>
+        </a>
+        <a href="grades.html" class="nav-link">
+          <span class="icon">📊</span>
+          <span>Grades</span>
+        </a>
+
+        <div class="nav-section-title">Other</div>
+        <a href="#" class="nav-link">
+          <span class="icon">💬</span>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">⚙️</span>
+          <span>Settings</span>
+        </a>
+        <a href="login.html" class="nav-link">
+          <span class="icon">🚪</span>
+          <span>Logout</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        © 2025 KL/Your Univ LMS
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <div>
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>Grades</h1>
+          <p>Semester‑wise subject grades</p>
+        </div>
+        <div class="topbar-right">
+          <div class="badge-pill">Semester 3</div>
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="card grades-card">
+          <div class="card-header">
+            <h2 class="card-title">Current semester grades</h2>
+            <p class="card-subtitle">Internal, external and total marks for each subject</p>
+          </div>
+
+          <table class="grades-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Course code</th>
+                <th>Credits</th>
+                <th>Internal (30)</th>
+                <th>End‑exam (70)</th>
+                <th>Total (100)</th>
+                <th>Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Data Structures</td>
+                <td>CSE201</td>
+                <td>3</td>
+                <td>27</td>
+                <td>62</td>
+                <td>89</td>
+                <td><span class="grade-badge grade-a">A</span></td>
+              </tr>
+              <tr>
+                <td>Database Management Systems</td>
+                <td>CSE203</td>
+                <td>3</td>
+                <td>24</td>
+                <td>58</td>
+                <td>82</td>
+                <td><span class="grade-badge grade-a">A</span></td>
+              </tr>
+              <tr>
+                <td>Java Programming</td>
+                <td>CSE205</td>
+                <td>3</td>
+                <td>25</td>
+                <td>55</td>
+                <td>80</td>
+                <td><span class="grade-badge grade-b">B+</span></td>
+              </tr>
+              <tr>
+                <td>Discrete Mathematics</td>
+                <td>MAT203</td>
+                <td>4</td>
+                <td>22</td>
+                <td>51</td>
+                <td>73</td>
+                <td><span class="grade-badge grade-b">B</span></td>
+              </tr>
+              <tr>
+                <td>Soft Skills</td>
+                <td>HUM201</td>
+                <td>2</td>
+                <td>28</td>
+                <td>60</td>
+                <td>88</td>
+                <td><span class="grade-badge grade-a">A</span></td>
+              </tr>
+              <tr>
+                <td>Mini Project</td>
+                <td>CSE207</td>
+                <td>2</td>
+                <td>30</td>
+                <td>65</td>
+                <td>95</td>
+                <td><span class="grade-badge grade-a">A+</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="font-size: 12px; color: var(--muted); margin-top: 10px;">
+            Note: These are sample marks and grades; in a real LMS, this data would be loaded from the backend gradebook for each student. [web:123][web:126]
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

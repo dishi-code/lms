@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Dashboard - UniLMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span>L</span> UniLMS
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="dashboard.html" class="nav-link active">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="courses.html" class="nav-link">
+          <span class="icon">📚</span>
+          <span>My Courses</span>
+        </a>
+        <a href="timetable.html" class="nav-link">
+          <span class="icon">🕒</span>
+          <span>Timetable</span>
+        </a>
+        <a href="assignments.html" class="nav-link">
+          <span class="icon">📝</span>
+          <span>Assignments</span>
+        </a>
+        <a href="grades.html" class="nav-link">
+          <span class="icon">📊</span>
+          <span>Grades</span>
+        </a>
+
+        <div class="nav-section-title">Other</div>
+        <a href="#" class="nav-link">
+          <span class="icon">💬</span>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">⚙️</span>
+          <span>Settings</span>
+        </a>
+        <a href="login.html" class="nav-link">
+          <span class="icon">🚪</span>
+          <span>Logout</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        © 2025 KL/Your Univ LMS
+      </div>
+    </aside>
+
+    <!-- Main area -->
+    <div>
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>Hi, Student</h1>
+          <p>Semester 3 · B.Tech CSE</p>
+        </div>
+        <div class="topbar-right">
+          <div class="badge-pill">Attendance: 92%</div>
+          <div class="badge-pill" style="background: rgba(245,158,11,0.15); color:#b45309;">
+            2 due today
+          </div>
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <!-- Main content -->
+      <main class="main">
+        <!-- Summary cards -->
+        <div class="cards-grid">
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Today’s classes</h2>
+              <span class="badge badge-success">On track</span>
+            </div>
+            <p class="card-subtitle">Friday · 26 Dec 2025</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Course</th>
+                  <th>Room</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>09:00 - 10:00</td>
+                  <td>Data Structures</td>
+                  <td>A-307</td>
+                </tr>
+                <tr>
+                  <td>11:00 - 12:00</td>
+                  <td>DBMS</td>
+                  <td>CS Lab 2</td>
+                </tr>
+                <tr>
+                  <td>14:00 - 15:00</td>
+                  <td>Discrete Math</td>
+                  <td>B-210</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Upcoming deadlines</h2>
+              <span class="badge badge-warning">2 due soon</span>
+            </div>
+            <p class="card-subtitle">Next 7 days</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Task</th>
+                  <th>Due</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>DBMS</td>
+                  <td>Assignment 2</td>
+                  <td>28 Dec</td>
+                </tr>
+                <tr>
+                  <td>Java Programming</td>
+                  <td>Lab Evaluation</td>
+                  <td>30 Dec</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="card">
+            <div class="card-header">
+              <h2 class="card-title">Quick stats</h2>
+            </div>
+            <p class="card-subtitle">Current semester summary</p>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Registered courses</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Average attendance</td>
+                  <td>92%</td>
+                </tr>
+                <tr>
+                  <td>CGPA (till now)</td>
+                  <td>8.42</td>
+                </tr>
+                <tr>
+                  <td>Unread messages</td>
+                  <td>3</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </div>
+
+        <!-- Course tiles -->
+        <section style="margin-top: 22px;">
+          <div class="card-header" style="margin-bottom: 6px;">
+            <h2 class="card-title">My courses</h2>
+            <a href="courses.html" style="font-size: 12px; color: var(--primary); text-decoration:none;">
+              View all →
+            </a>
+          </div>
+          <div class="course-grid">
+            <a href="course.html" class="course-card">
+              <div class="course-code">CSE201</div>
+              <div class="course-name">Data Structures</div>
+              <div class="course-meta">Faculty: Dr. Rao · 80% complete</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%;"></div>
+              </div>
+            </a>
+
+            <a href="course.html" class="course-card">
+              <div class="course-code">CSE203</div>
+              <div class="course-name">DBMS</div>
+              <div class="course-meta">Faculty: Prof. Priya · 60% complete</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 60%;"></div>
+              </div>
+            </a>
+
+            <a href="course.html" class="course-card">
+              <div class="course-code">CSE205</div>
+              <div class="course-name">Java Programming</div>
+              <div class="course-meta">Faculty: Mr. Ajay · 70% complete</div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 70%;"></div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

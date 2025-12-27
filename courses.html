@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Courses - UniLMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .courses-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .filter-row {
+      display: flex;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .filter-chip {
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      cursor: pointer;
+      background: #ffffff;
+      transition: background var(--transition), color var(--transition), border var(--transition);
+    }
+    .filter-chip.active {
+      background: rgba(37, 99, 235, 0.08);
+      color: var(--primary);
+      border-color: rgba(37, 99, 235, 0.7);
+    }
+    .course-list-card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .course-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 12px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: #ffffff;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      transition: transform var(--transition), box-shadow var(--transition), border var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+    .course-row:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-soft);
+      border-color: rgba(37, 99, 235, 0.7);
+    }
+    .course-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1e3a8a, #22c55e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .course-row-main { flex: 1; }
+    .course-row-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .course-row-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 3px;
+    }
+    .course-row-right {
+      text-align: right;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span>L</span> UniLMS
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="dashboard.html" class="nav-link">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="courses.html" class="nav-link active">
+          <span class="icon">📚</span>
+          <span>My Courses</span>
+        </a>
+        <a href="timetable.html" class="nav-link">
+          <span class="icon">🕒</span>
+          <span>Timetable</span>
+        </a>
+        <a href="assignments.html" class="nav-link">
+          <span class="icon">📝</span>
+          <span>Assignments</span>
+        </a>
+        <a href="grades.html" class="nav-link">
+          <span class="icon">📊</span>
+          <span>Grades</span>
+        </a>
+
+        <div class="nav-section-title">Other</div>
+        <a href="#" class="nav-link">
+          <span class="icon">💬</span>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">⚙️</span>
+          <span>Settings</span>
+        </a>
+        <a href="login.html" class="nav-link">
+          <span class="icon">🚪</span>
+          <span>Logout</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        © 2025 KL/Your Univ LMS
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <div>
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>My courses</h1>
+          <p>All enrolled courses for this semester</p>
+        </div>
+        <div class="topbar-right">
+          <div class="badge-pill">Semester 3</div>
+          <div class="badge-pill">5 courses</div>
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="card">
+          <div class="courses-header-row">
+            <div>
+              <h2 class="card-title">Enrolled courses</h2>
+              <p class="card-subtitle">Click a course to open its LMS page</p>
+            </div>
+          </div>
+
+          <div class="filter-row">
+            <span class="filter-chip active">Current semester</span>
+            <span class="filter-chip">Previous semesters</span>
+            <span class="filter-chip">Completed</span>
+          </div>
+
+          <div class="course-list-card">
+            <!-- Data Structures -->
+            <a href="course.html" class="course-row">
+              <div class="course-avatar">DS</div>
+              <div class="course-row-main">
+                <div class="course-row-title">Data Structures</div>
+                <div class="course-row-meta">
+                  CSE201 · Faculty: Dr. Rao · Mon, Wed, Fri 09:00–10:00
+                </div>
+                <div class="course-row-meta">
+                  Sessions: 24 · PPTs: 12 · ALM submissions: 3 · Home assignments: 4
+                </div>
+              </div>
+              <div class="course-row-right">
+                <div class="badge badge-success">80% complete</div>
+                <div style="margin-top:4px;">Attendance: 95%</div>
+              </div>
+            </a>
+
+            <!-- DBMS -->
+            <a href="course.html" class="course-row">
+              <div class="course-avatar">DB</div>
+              <div class="course-row-main">
+                <div class="course-row-title">Database Management Systems</div>
+                <div class="course-row-meta">
+                  CSE203 · Faculty: Prof. Priya · Tue, Thu 11:00–12:00
+                </div>
+                <div class="course-row-meta">
+                  Sessions: 22 · PPTs: 10 · ALM submissions: 2 · Home assignments: 3
+                </div>
+              </div>
+              <div class="course-row-right">
+                <div class="badge badge-success">60% complete</div>
+                <div style="margin-top:4px;">Attendance: 90%</div>
+              </div>
+            </a>
+
+            <!-- Java Programming -->
+            <a href="course.html" class="course-row">
+              <div class="course-avatar">JP</div>
+              <div class="course-row-main">
+                <div class="course-row-title">Java Programming</div>
+                <div class="course-row-meta">
+                  CSE205 · Faculty: Mr. Ajay · Lab: Wed 14:00–16:00
+                </div>
+                <div class="course-row-meta">
+                  Sessions: 20 · PPTs: 8 · ALM submissions: 2 · Home assignments: 3
+                </div>
+              </div>
+              <div class="course-row-right">
+                <div class="badge badge-success">70% complete</div>
+                <div style="margin-top:4px;">Attendance: 88%</div>
+              </div>
+            </a>
+
+            <!-- Discrete Mathematics -->
+            <a href="course.html" class="course-row">
+              <div class="course-avatar">DM</div>
+              <div class="course-row-main">
+                <div class="course-row-title">Discrete Mathematics</div>
+                <div class="course-row-meta">
+                  MAT203 · Faculty: Dr. Meera · Mon, Wed 11:00–12:00
+                </div>
+                <div class="course-row-meta">
+                  Sessions: 26 · PPTs: 11 · ALM submissions: 2 · Home assignments: 4
+                </div>
+              </div>
+              <div class="course-row-right">
+                <div class="badge badge-success">75% complete</div>
+                <div style="margin-top:4px;">Attendance: 91%</div>
+              </div>
+            </a>
+
+            <!-- Soft Skills -->
+            <a href="course.html" class="course-row">
+              <div class="course-avatar">SS</div>
+              <div class="course-row-main">
+                <div class="course-row-title">Soft Skills</div>
+                <div class="course-row-meta">
+                  HUM201 · Faculty: Ms. Kavya · Fri 10:00–11:00
+                </div>
+                <div class="course-row-meta">
+                  Sessions: 16 · PPTs: 6 · ALM submissions: 1 · Home assignments: 2
+                </div>
+              </div>
+              <div class="course-row-right">
+                <div class="badge badge-success">85% complete</div>
+                <div style="margin-top:4px;">Attendance: 96%</div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

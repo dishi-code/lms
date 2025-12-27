@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>University LMS - Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gradient">
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1 class="logo">UniLMS</h1>
+      <h2>Sign in</h2>
+      <p class="subtitle">Use your university ID to continue</p>
+      <form action="dashboard.html" method="get">
+        <label for="userId">University ID</label>
+        <input type="text" id="userId" name="userId" placeholder="e.g., 210003001234" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" required />
+
+        <button type="submit" class="btn btn-primary">Login</button>
+
+        <div class="auth-footer">
+          <a href="#">Forgot password?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const id = document.getElementById("userId").value;
+    const pass = document.getElementById("password").value;
+
+    if (id && pass) {
+      window.location.href = "dashboard.html";
+    } else {
+      alert("Invalid login");
+    }
+  });
+</script>
+</body>
+</html>

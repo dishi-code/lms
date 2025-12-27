@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Assignments - UniLMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .assign-card { margin-top: 12px; }
+    .assign-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .assign-table th,
+    .assign-table td {
+      border: 1px solid var(--border);
+      padding: 8px 10px;
+      text-align: left;
+    }
+    .assign-table thead {
+      background: #eff6ff;
+    }
+    .assign-status {
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 999px;
+    }
+    .status-pending {
+      background: rgba(245, 158, 11, 0.15);
+      color: #b45309;
+    }
+    .status-submitted {
+      background: rgba(22, 163, 74, 0.15);
+      color: #15803d;
+    }
+    .upload-input {
+      font-size: 12px;
+    }
+    .upload-btn {
+      margin-top: 4px;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span>L</span> UniLMS
+      </div>
+
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="dashboard.html" class="nav-link">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="courses.html" class="nav-link">
+          <span class="icon">📚</span>
+          <span>My Courses</span>
+        </a>
+        <a href="timetable.html" class="nav-link">
+          <span class="icon">🕒</span>
+          <span>Timetable</span>
+        </a>
+        <a href="assignments.html" class="nav-link">
+          <span class="icon">📝</span>
+          <span>Assignments</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">📊</span>
+          <span>Grades</span>
+        </a>
+
+        <div class="nav-section-title">Other</div>
+        <a href="#" class="nav-link">
+          <span class="icon">💬</span>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">⚙️</span>
+          <span>Settings</span>
+        </a>
+        <a href="login.html" class="nav-link">
+          <span class="icon">🚪</span>
+          <span>Logout</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        © 2025 KL/Your Univ LMS
+      </div>
+    </aside>
+
+    <!-- Content -->
+    <div>
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>Assignments</h1>
+          <p>Upload your assignment files subject‑wise</p>
+        </div>
+        <div class="topbar-right">
+          <div class="badge-pill">Semester 3</div>
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="card assign-card">
+          <div class="card-header">
+            <h2 class="card-title">Pending assignments</h2>
+            <p class="card-subtitle">Choose a file and click Upload for each subject</p>
+          </div>
+
+          <!-- One form for each row: front‑end only (no real backend yet) -->
+          <table class="assign-table">
+            <thead>
+              <tr>
+                <th>Subject</th>
+                <th>Assignment</th>
+                <th>Due date</th>
+                <th>Status</th>
+                <th>Upload file</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Data Structures -->
+              <tr>
+                <td>Data Structures</td>
+                <td>Assignment 1: Linked List implementation</td>
+                <td>30 Dec 2025</td>
+                <td><span class="assign-status status-pending">Pending</span></td>
+                <td>
+                  <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" name="ds_file" class="upload-input" />
+                    <button type="submit" class="upload-btn">Upload</button>
+                  </form>
+                </td>
+              </tr>
+
+              <!-- DBMS -->
+              <tr>
+                <td>DBMS</td>
+                <td>Assignment 2: SQL queries on University DB</td>
+                <td>28 Dec 2025</td>
+                <td><span class="assign-status status-pending">Pending</span></td>
+                <td>
+                  <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" name="dbms_file" class="upload-input" />
+                    <button type="submit" class="upload-btn">Upload</button>
+                  </form>
+                </td>
+              </tr>
+
+              <!-- Java Programming -->
+              <tr>
+                <td>Java Programming</td>
+                <td>Lab Evaluation: LMS mini‑project</td>
+                <td>30 Dec 2025</td>
+                <td><span class="assign-status status-pending">Pending</span></td>
+                <td>
+                  <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" name="java_file" class="upload-input" />
+                    <button type="submit" class="upload-btn">Upload</button>
+                  </form>
+                </td>
+              </tr>
+
+              <!-- Discrete Math -->
+              <tr>
+                <td>Discrete Math</td>
+                <td>Assignment: Graph theory problems sheet</td>
+                <td>02 Jan 2026</td>
+                <td><span class="assign-status status-pending">Pending</span></td>
+                <td>
+                  <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" name="dm_file" class="upload-input" />
+                    <button type="submit" class="upload-btn">Upload</button>
+                  </form>
+                </td>
+              </tr>
+
+              <!-- Soft Skills -->
+              <tr>
+                <td>Soft Skills</td>
+                <td>Presentation: Career planning slide deck</td>
+                <td>05 Jan 2026</td>
+                <td><span class="assign-status status-pending">Pending</span></td>
+                <td>
+                  <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" name="ss_file" class="upload-input" />
+                    <button type="submit" class="upload-btn">Upload</button>
+                  </form>
+                </td>
+              </tr>
+
+              <!-- Mini Project -->
+              <tr>
+                <td>Mini Project</td>
+                <td>Project report: LMS portal documentation</td>
+                <td>10 Jan 2026</td>
+                <td><span class="assign-status status-pending">Pending</span></td>
+                <td>
+                  <form action="#" method="post" enctype="multipart/form-data">
+                    <input type="file" name="mp_file" class="upload-input" />
+                    <button type="submit" class="upload-btn">Upload</button>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p style="font-size: 12px; color: var(--muted); margin-top: 10px;">
+            Note: Right now this is front‑end only. To actually store uploaded files,
+            you need a backend (for example, a Java/Spring Boot or Node.js API) to
+            handle the form post and save files on the server. [web:118][web:120]
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script>
+  const forms = document.querySelectorAll("form");
+
+  forms.forEach(form => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const fileInput = form.querySelector("input[type='file']");
+      if (!fileInput.value) {
+        alert("Please choose a file first");
+        return;
+      }
+
+      alert("File uploaded successfully (Demo only)");
+      fileInput.value = "";
+    });
+  });
+</script>
+</body>
+</html>

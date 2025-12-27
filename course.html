@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Course - Data Structures | UniLMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .course-layout {
+      display: grid;
+      grid-template-columns: 2.1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+    }
+    .tab-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .tab {
+      padding: 6px 10px;
+      font-size: 13px;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+      border: 1px solid transparent;
+    }
+    .tab.active {
+      border-color: var(--border);
+      border-bottom-color: #ffffff;
+      background: #ffffff;
+      font-weight: 600;
+    }
+    .module {
+      border-radius: 10px;
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      margin-bottom: 8px;
+    }
+    .module-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .module-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .sidebar-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      padding: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 11px;
+      border-radius: 999px;
+      background: rgba(59, 130, 246, 0.12);
+      color: #1d4ed8;
+      margin-left: 6px;
+    }
+    .upload-btn {
+      margin-top: 4px;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      background: var(--primary);
+      color: #ffffff;
+    }
+    @media (max-width: 950px) {
+      .course-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <span>L</span> UniLMS
+      </div>
+      <div>
+        <div class="nav-section-title">Main</div>
+        <a href="dashboard.html" class="nav-link">
+          <span class="icon">🏠</span>
+          <span>Dashboard</span>
+        </a>
+        <a href="courses.html" class="nav-link active">
+          <span class="icon">📚</span>
+          <span>My Courses</span>
+        </a>
+        <a href="timetable.html" class="nav-link">
+          <span class="icon">🕒</span>
+          <span>Timetable</span>
+        </a>
+        <a href="assignments.html" class="nav-link">
+          <span class="icon">📝</span>
+          <span>Assignments</span>
+        </a>
+        <a href="grades.html" class="nav-link">
+          <span class="icon">📊</span>
+          <span>Grades</span>
+        </a>
+        <div class="nav-section-title">Other</div>
+        <a href="#" class="nav-link">
+          <span class="icon">💬</span>
+          <span>Messages</span>
+        </a>
+        <a href="#" class="nav-link">
+          <span class="icon">⚙️</span>
+          <span>Settings</span>
+        </a>
+        <a href="login.html" class="nav-link">
+          <span class="icon">🚪</span>
+          <span>Logout</span>
+        </a>
+      </div>
+      <div class="sidebar-footer">
+        © 2025 KL/Your Univ LMS
+      </div>
+    </aside>
+
+    <!-- Right side -->
+    <div>
+      <!-- Topbar -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <h1>Data Structures</h1>
+          <p>CSE201 · Faculty: Dr. Rao</p>
+        </div>
+        <div class="topbar-right">
+          <div class="badge-pill">Attendance: 95%</div>
+          <div class="badge-pill">Progress: 80%</div>
+          <div class="avatar"></div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="course-layout">
+          <!-- Main column -->
+          <section>
+            <!-- Tabs row (visual only; no JS switching yet) -->
+            <div class="tab-row">
+              <div class="tab active">Overview</div>
+              <div class="tab">Materials</div>
+              <div class="tab">Assignments</div>
+              <div class="tab">Quizzes</div>
+              <div class="tab">Discussion</div>
+              <div class="tab">Grades</div>
+            </div>
+
+            <!-- OVERVIEW -->
+            <div class="card" style="margin-bottom: 10px;">
+              <div class="card-header">
+                <h2 class="card-title">Course overview</h2>
+              </div>
+              <p class="card-subtitle">
+                Learn arrays, linked lists, stacks, queues, trees, graphs and algorithms with hands‑on practice.
+              </p>
+              <ul style="margin-top: 10px; font-size: 13px; padding-left: 18px;">
+                <li>Credits: 3</li>
+                <li>Contact hours: 3-0-0 (3 hours theory / week)</li>
+                <li>Prerequisites: Programming in C / Java</li>
+              </ul>
+            </div>
+
+            <h2 class="card-title" style="margin: 6px 0;">Weekly modules</h2>
+            <div class="module">
+              <div class="module-title">Week 1: Introduction & Complexity</div>
+              <div class="module-meta">Slides · Reading · 1 quiz · 1 discussion</div>
+            </div>
+            <div class="module">
+              <div class="module-title">Week 2: Arrays & Linked Lists</div>
+              <div class="module-meta">Slides · Code examples · 1 lab assignment</div>
+            </div>
+            <div class="module">
+              <div class="module-title">Week 3: Stacks & Queues</div>
+              <div class="module-meta">Slides · Lab · Quiz 1</div>
+            </div>
+
+            <!-- MATERIALS -->
+            <div class="card" style="margin-top: 18px;">
+              <div class="card-header">
+                <h2 class="card-title">Materials</h2>
+                <span class="badge badge-success">Course resources</span>
+              </div>
+              <p class="card-subtitle">Sessions, PPTs and reference files for this course.</p>
+
+              <table class="table" style="margin-top: 8px;">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Title</th>
+                    <th>Session</th>
+                    <th>Link</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Linked to your real file -->
+                  <tr>
+                    <td>PPT</td>
+                    <td>Session 15 PPT</td>
+                    <td>Session 15</td>
+                    <td>
+                      <a href="Session 15 PPT.pdf"
+                         style="color: var(--primary); font-size: 12px;"
+                         target="_blank">
+                        View PPT
+                      </a>
+                    </td>
+                  </tr>
+                  <!-- Demo rows you can keep or remove -->
+                  <tr>
+                    <td>PPT</td>
+                    <td>Intro to Data Structures</td>
+                    <td>Session 1</td>
+                    <td><a href="#" style="color: var(--primary); font-size: 12px;">View PPT</a></td>
+                  </tr>
+                  <tr>
+                    <td>PPT</td>
+                    <td>Arrays & Linked Lists</td>
+                    <td>Session 3</td>
+                    <td><a href="#" style="color: var(--primary); font-size: 12px;">View PPT</a></td>
+                  </tr>
+                  <tr>
+                    <td>Home Assignment</td>
+                    <td>Home Assignment 1: Linked list problems</td>
+                    <td>Session 6</td>
+                    <td><a href="CO4 Home Assignment (1).pdf" style="color: var(--primary); font-size: 12px;">Download PDF</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- ASSIGNMENTS -->
+            <div class="card" style="margin-top: 18px;">
+              <div class="card-header">
+                <h2 class="card-title">Assignments</h2>
+                <span class="badge badge-warning">Home assignment submissions</span>
+              </div>
+              <p class="card-subtitle">Upload your solutions for ALM and home assignments.</p>
+
+              <table class="table" style="margin-top: 8px;">
+                <thead>
+                  <tr>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Due date</th>
+                    <th>Status</th>
+                    <th>Your submission</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Home Assignment 1: Linked list implementation</td>
+                    <td>Home assignment</td>
+                    <td>30 Dec 2025</td>
+                    <td>Pending</td>
+                    <td>
+                      <form action="#" method="post" enctype="multipart/form-data" style="font-size: 12px;">
+                        <input type="file" name="ha1_file" style="font-size: 12px;" />
+                        <button type="submit" class="upload-btn">Upload</button>
+                      </form>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>ALM Task 1: List ADT</td>
+                    <td>ALM submission</td>
+                    <td>28 Dec 2025</td>
+                    <td>Pending</td>
+                    <td>
+                      <form action="#" method="post" enctype="multipart/form-data" style="font-size: 12px;">
+                        <input type="file" name="alm1_file" style="font-size: 12px;" />
+                        <button type="submit" class="upload-btn">Upload</button>
+                      </form>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- QUIZZES -->
+            <div class="card" style="margin-top: 18px;">
+              <div class="card-header">
+                <h2 class="card-title">Quizzes</h2>
+                <span class="badge badge-success">1 upcoming</span>
+              </div>
+              <p class="card-subtitle">Online quizzes for this course.</p>
+
+              <table class="table" style="margin-top: 8px;">
+                <thead>
+                  <tr>
+                    <th>Quiz</th>
+                    <th>Coverage</th>
+                    <th>Open from</th>
+                    <th>Open until</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Quiz 1</td>
+                    <td>Week 1–3 (Intro, Arrays, Linked Lists, Stacks)</td>
+                    <td>28 Dec 2025 · 09:00</td>
+                    <td>28 Dec 2025 · 23:59</td>
+                    <td>Not started</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- DISCUSSION -->
+            <div class="card" style="margin-top: 18px;">
+              <div class="card-header">
+                <h2 class="card-title">Discussion</h2>
+                <span class="badge badge-success">Open</span>
+              </div>
+              <p class="card-subtitle">Ask doubts and discuss concepts with your classmates.</p>
+
+              <div style="margin-top: 10px;">
+                <div style="padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 6px; font-size: 13px;">
+                  <strong>Student 1:</strong> Can someone explain the difference between singly and doubly linked list?
+                </div>
+                <div style="padding: 8px 10px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 6px; font-size: 13px;">
+                  <strong>Faculty:</strong> Check Week 2 notes, slide 14. We will also revisit this in next class.
+                </div>
+
+                <form action="#" method="post" style="margin-top: 8px;">
+                  <textarea name="discussion_post" rows="3" placeholder="Write a comment or question..."
+                    style="width: 100%; font-size: 13px; padding: 8px; border-radius: 8px; border: 1px solid var(--border);"></textarea>
+                  <button type="submit" class="btn btn-primary" style="margin-top: 6px; width: auto;">Post</button>
+                </form>
+              </div>
+            </div>
+          </section>
+
+          <!-- Sidebar column -->
+          <aside>
+            <div class="sidebar-card">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="font-weight:600;">Next class</div>
+                <span class="pill">Today</span>
+              </div>
+              <p style="margin-top:6px;">Fri · 02:00 PM - 03:00 PM</p>
+              <p style="font-size:12px; color:var(--muted); margin-top:4px;">
+                Topic: Stacks operations and applications
+              </p>
+            </div>
+
+            <div class="sidebar-card">
+              <div style="font-weight:600; margin-bottom:4px;">Upcoming tasks</div>
+              <ul style="font-size:13px; padding-left:18px;">
+                <li>Quiz 1: Stacks & Queues · Due 28 Dec</li>
+                <li>Assignment 1: Linked List implementation · Due 30 Dec</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <div style="font-weight:600; margin-bottom:4px;">Faculty contact</div>
+              <p>Dr. Rao</p>
+              <p style="font-size:13px; color:var(--muted);">
+                Email: rao.ds@university.edu<br />
+                Office hours: Mon 3–5 PM
+              </p>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+</html>
